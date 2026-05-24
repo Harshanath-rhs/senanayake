@@ -3000,411 +3000,504 @@
                 letter-spacing: 2px;
             }
         }
-    
-/* ══════════════════════════════════════════════
+
+        /* ══════════════════════════════════════════════
    PORTFOLIO — MEAL & EXPERIMENTAL SECTIONS
 ══════════════════════════════════════════════ */
 
-/* ── Shared portfolio layout ── */
-.pf-section-intro {
-    margin-bottom: 40px;
-    padding: 24px 28px;
-    border-left: 2px solid rgba(126,206,244,0.2);
-    background: rgba(6,24,37,0.3);
-}
-.pf-section-intro p {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(14px,1.05vw,16px);
-    font-weight: 300;
-    line-height: 1.85;
-    color: rgba(200,232,250,0.78);
-}
-.pf-section-intro p + p { margin-top: 10px; }
-.pf-intro-sub {
-    font-family: 'Raleway', sans-serif;
-    font-size: 8px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: rgba(201,168,76,0.5);
-    margin-top: 14px;
-    display: block;
-}
+        /* ── Shared portfolio layout ── */
+        .pf-section-intro {
+            margin-bottom: 40px;
+            padding: 24px 28px;
+            border-left: 2px solid rgba(126, 206, 244, 0.2);
+            background: rgba(6, 24, 37, 0.3);
+        }
 
-/* ── Project block ── */
-.pf-project-block {
-    margin-bottom: 64px;
-    border: 1px solid rgba(126,206,244,0.1);
-    border-radius: 6px;
-    overflow: hidden;
-}
-.pf-project-block:last-of-type { margin-bottom: 32px; }
+        .pf-section-intro p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(14px, 1.05vw, 16px);
+            font-weight: 300;
+            line-height: 1.85;
+            color: rgba(200, 232, 250, 0.78);
+        }
 
-.pf-project-header {
-    padding: 28px 36px 22px;
-    background: rgba(6,24,37,0.55);
-    border-bottom: 1px solid rgba(126,206,244,0.07);
-    position: relative;
-    overflow: hidden;
-}
-.pf-project-header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(126,206,244,0.04) 0%, transparent 60%);
-    pointer-events: none;
-}
-.pf-project-tag {
-    font-family: 'Raleway', sans-serif;
-    font-size: 8px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: rgba(201,168,76,0.55);
-    display: block;
-    margin-bottom: 10px;
-}
-.pf-project-title {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: clamp(16px, 2vw, 26px);
-    font-weight: 700;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, #fff 0%, var(--ice-1) 60%, rgba(126,206,244,0.7) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-    line-height: 1.2;
-}
-.pf-project-descriptor {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(13px,1vw,15px);
-    font-style: italic;
-    font-weight: 300;
-    color: rgba(168,216,234,0.6);
-    line-height: 1.6;
-}
+        .pf-section-intro p+p {
+            margin-top: 10px;
+        }
 
-/* ── Project body ── */
-.pf-project-body {
-    padding: 32px 36px 36px;
-    background: rgba(3,16,30,0.35);
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
+        .pf-intro-sub {
+            font-family: 'Raleway', sans-serif;
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.5);
+            margin-top: 14px;
+            display: block;
+        }
 
-/* ── Narrative blocks ── */
-.pf-narrative {
-    margin-bottom: 28px;
-}
-.pf-narrative-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 8px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: rgba(201,168,76,0.5);
-    display: block;
-    margin-bottom: 12px;
-}
-.pf-narrative p {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(14px,1.05vw,16px);
-    font-weight: 300;
-    line-height: 1.9;
-    color: rgba(200,232,250,0.75);
-    padding-left: 18px;
-    border-left: 2px solid rgba(126,206,244,0.12);
-    position: relative;
-}
-.pf-narrative p + p { margin-top: 16px; }
-.pf-narrative-sep {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(126,206,244,0.1), rgba(201,168,76,0.1), transparent);
-    margin: 28px 0;
-}
+        /* ── Project block ── */
+        .pf-project-block {
+            margin-bottom: 64px;
+            border: 1px solid rgba(126, 206, 244, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
 
-/* ── Screenshot archive ── */
-.pf-archive-title {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-.pf-archive-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(201,168,76,0.25), transparent);
-}
-.pf-screenshots {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 14px;
-    margin-bottom: 8px;
-}
-.pf-screenshot-item {
-    position: relative;
-    cursor: pointer;
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid rgba(126,206,244,0.1);
-    transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s;
-    background: rgba(6,24,37,0.6);
-}
-.pf-screenshot-item:hover {
-    border-color: rgba(126,206,244,0.35);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.4), 0 0 16px rgba(126,206,244,0.08);
-    transform: translateY(-3px);
-}
-.pf-screenshot-img {
-    width: 100%;
-    aspect-ratio: 16/10;
-    object-fit: cover;
-    display: block;
-    filter: brightness(0.85) saturate(0.8);
-    transition: filter 0.35s;
-}
-.pf-screenshot-item:hover .pf-screenshot-img { filter: brightness(1) saturate(1); }
+        .pf-project-block:last-of-type {
+            margin-bottom: 32px;
+        }
 
-/* Placeholder style */
-.pf-screenshot-placeholder {
-    width: 100%;
-    aspect-ratio: 16/10;
-    background: rgba(6,24,37,0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
-}
-.pf-screenshot-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(rgba(126,206,244,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(126,206,244,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
-}
-.pf-ph-icon {
-    font-size: 18px;
-    opacity: 0.2;
-    position: relative;
-    z-index: 1;
-}
-.pf-ph-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 7px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(126,206,244,0.2);
-    position: relative;
-    z-index: 1;
-}
-.pf-ph-scan {
-    position: absolute;
-    left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(126,206,244,0.2), transparent);
-    animation: ph-scan 3s ease-in-out infinite;
-    z-index: 2;
-}
-@keyframes ph-scan { 0%{top:0%;opacity:0} 10%{opacity:1} 90%{opacity:0.3} 100%{top:100%;opacity:0} }
+        .pf-project-header {
+            padding: 28px 36px 22px;
+            background: rgba(6, 24, 37, 0.55);
+            border-bottom: 1px solid rgba(126, 206, 244, 0.07);
+            position: relative;
+            overflow: hidden;
+        }
 
-.pf-screenshot-caption {
-    font-family: 'Raleway', sans-serif;
-    font-size: 8px;
-    letter-spacing: 1.5px;
-    color: rgba(126,206,244,0.38);
-    padding: 8px 10px;
-    line-height: 1.5;
-    border-top: 1px solid rgba(126,206,244,0.06);
-}
+        .pf-project-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(126, 206, 244, 0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
 
-/* ── Screenshot lightbox ── */
-.pf-lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 600;
-    background: rgba(2,10,20,0.94);
-    backdrop-filter: blur(16px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s, visibility 0.35s;
-}
-.pf-lightbox.open { opacity: 1; visibility: visible; }
-.pf-lightbox-inner {
-    max-width: min(900px, 90vw);
-    width: 100%;
-    position: relative;
-}
-.pf-lightbox-img {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid rgba(126,206,244,0.18);
-    box-shadow: 0 0 80px rgba(126,206,244,0.08);
-    display: block;
-}
-.pf-lightbox-caption {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 14px;
-    font-style: italic;
-    color: rgba(168,216,234,0.55);
-    text-align: center;
-    margin-top: 14px;
-    font-weight: 300;
-}
-.pf-lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    background: none;
-    border: none;
-    color: rgba(126,206,244,0.4);
-    font-size: 20px;
-    cursor: pointer;
-    transition: color 0.3s;
-    padding: 4px 8px;
-}
-.pf-lightbox-close:hover { color: rgba(126,206,244,0.9); }
+        .pf-project-tag {
+            font-family: 'Raleway', sans-serif;
+            font-size: 8px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.55);
+            display: block;
+            margin-bottom: 10px;
+        }
 
-/* ── Placeholder archive (LISI) ── */
-.pf-pending-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 14px;
-    opacity: 0.65;
-}
-.pf-pending-item {
-    border: 1px dashed rgba(126,206,244,0.1);
-    border-radius: 4px;
-    aspect-ratio: 16/10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: rgba(3,16,30,0.5);
-    position: relative;
-    overflow: hidden;
-}
-.pf-pending-item::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(rgba(126,206,244,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(126,206,244,0.02) 1px, transparent 1px);
-    background-size: 24px 24px;
-}
-.pf-pending-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 7px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(126,206,244,0.2);
-    text-align: center;
-    padding: 0 12px;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-}
-.pf-pending-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: rgba(126,206,244,0.15);
-    position: relative;
-    z-index: 1;
-    animation: pending-pulse 2.5s ease-in-out infinite;
-}
-@keyframes pending-pulse { 0%,100%{opacity:0.3} 50%{opacity:0.8} }
+        .pf-project-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(16px, 2vw, 26px);
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #fff 0%, var(--ice-1) 60%, rgba(126, 206, 244, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
 
-/* ── Technical limitation block ── */
-.pf-limitation {
-    margin-top: 32px;
-    padding: 24px 28px;
-    border: 1px solid rgba(201,168,76,0.15);
-    border-left: 2px solid rgba(201,168,76,0.4);
-    background: rgba(6,24,37,0.3);
-    border-radius: 0 4px 4px 0;
-}
-.pf-limitation-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 8px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: rgba(201,168,76,0.55);
-    display: block;
-    margin-bottom: 12px;
-}
-.pf-limitation p {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(13px,1vw,15px);
-    font-weight: 300;
-    line-height: 1.85;
-    color: rgba(200,232,250,0.6);
-    font-style: italic;
-}
+        .pf-project-descriptor {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(13px, 1vw, 15px);
+            font-style: italic;
+            font-weight: 300;
+            color: rgba(168, 216, 234, 0.6);
+            line-height: 1.6;
+        }
 
-/* ── Archive status badge ── */
-.pf-archive-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 7px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: rgba(126,206,244,0.35);
-    border: 1px solid rgba(126,206,244,0.1);
-    padding: 6px 14px;
-    margin-bottom: 32px;
-    border-radius: 2px;
-}
-.pf-archive-status::before {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: rgba(126,206,244,0.35);
-    animation: pending-pulse 2s ease-in-out infinite;
-}
+        /* ── Project body ── */
+        .pf-project-body {
+            padding: 32px 36px 36px;
+            background: rgba(3, 16, 30, 0.35);
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
 
-/* ── Closing statement ── */
-.pf-closing {
-    margin-top: 40px;
-    padding: 24px 28px;
-    border-top: 1px solid rgba(126,206,244,0.07);
-    text-align: center;
-}
-.pf-closing p {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: clamp(13px,1vw,15px);
-    font-style: italic;
-    font-weight: 300;
-    color: rgba(200,232,250,0.4);
-    line-height: 1.8;
-}
+        /* ── Narrative blocks ── */
+        .pf-narrative {
+            margin-bottom: 28px;
+        }
 
-/* responsive */
-@media (max-width: 768px) {
-    .pf-project-header, .pf-project-body { padding: 22px 20px; }
-    .pf-screenshots { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 480px) {
-    .pf-screenshots { grid-template-columns: 1fr 1fr; }
-    .pf-pending-grid { grid-template-columns: 1fr 1fr; }
-}
+        .pf-narrative-label {
+            font-family: 'Raleway', sans-serif;
+            font-size: 8px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.5);
+            display: block;
+            margin-bottom: 12px;
+        }
 
+        .pf-narrative p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(14px, 1.05vw, 16px);
+            font-weight: 300;
+            line-height: 1.9;
+            color: rgba(200, 232, 250, 0.75);
+            padding-left: 18px;
+            border-left: 2px solid rgba(126, 206, 244, 0.12);
+            position: relative;
+        }
+
+        .pf-narrative p+p {
+            margin-top: 16px;
+        }
+
+        .pf-narrative-sep {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(126, 206, 244, 0.1), rgba(201, 168, 76, 0.1), transparent);
+            margin: 28px 0;
+        }
+
+        /* ── Screenshot archive ── */
+        .pf-archive-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .pf-archive-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(201, 168, 76, 0.25), transparent);
+        }
+
+        .pf-screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 14px;
+            margin-bottom: 8px;
+        }
+
+        .pf-screenshot-item {
+            position: relative;
+            cursor: pointer;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(126, 206, 244, 0.1);
+            transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s;
+            background: rgba(6, 24, 37, 0.6);
+        }
+
+        .pf-screenshot-item:hover {
+            border-color: rgba(126, 206, 244, 0.35);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(126, 206, 244, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .pf-screenshot-img {
+            width: 100%;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.85) saturate(0.8);
+            transition: filter 0.35s;
+        }
+
+        .pf-screenshot-item:hover .pf-screenshot-img {
+            filter: brightness(1) saturate(1);
+        }
+
+        /* Placeholder style */
+        .pf-screenshot-placeholder {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: rgba(6, 24, 37, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pf-screenshot-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(126, 206, 244, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(126, 206, 244, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .pf-ph-icon {
+            font-size: 18px;
+            opacity: 0.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pf-ph-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: 7px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(126, 206, 244, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .pf-ph-scan {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(126, 206, 244, 0.2), transparent);
+            animation: ph-scan 3s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes ph-scan {
+            0% {
+                top: 0%;
+                opacity: 0
+            }
+
+            10% {
+                opacity: 1
+            }
+
+            90% {
+                opacity: 0.3
+            }
+
+            100% {
+                top: 100%;
+                opacity: 0
+            }
+        }
+
+        .pf-screenshot-caption {
+            font-family: 'Raleway', sans-serif;
+            font-size: 8px;
+            letter-spacing: 1.5px;
+            color: rgba(126, 206, 244, 0.38);
+            padding: 8px 10px;
+            line-height: 1.5;
+            border-top: 1px solid rgba(126, 206, 244, 0.06);
+        }
+
+        /* ── Screenshot lightbox ── */
+        .pf-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 600;
+            background: rgba(2, 10, 20, 0.94);
+            backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s, visibility 0.35s;
+        }
+
+        .pf-lightbox.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .pf-lightbox-inner {
+            max-width: min(900px, 90vw);
+            width: 100%;
+            position: relative;
+        }
+
+        .pf-lightbox-img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid rgba(126, 206, 244, 0.18);
+            box-shadow: 0 0 80px rgba(126, 206, 244, 0.08);
+            display: block;
+        }
+
+        .pf-lightbox-caption {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 14px;
+            font-style: italic;
+            color: rgba(168, 216, 234, 0.55);
+            text-align: center;
+            margin-top: 14px;
+            font-weight: 300;
+        }
+
+        .pf-lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: rgba(126, 206, 244, 0.4);
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+            padding: 4px 8px;
+        }
+
+        .pf-lightbox-close:hover {
+            color: rgba(126, 206, 244, 0.9);
+        }
+
+        /* ── Placeholder archive (LISI) ── */
+        .pf-pending-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 14px;
+            opacity: 0.65;
+        }
+
+        .pf-pending-item {
+            border: 1px dashed rgba(126, 206, 244, 0.1);
+            border-radius: 4px;
+            aspect-ratio: 16/10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(3, 16, 30, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pf-pending-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(126, 206, 244, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(126, 206, 244, 0.02) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .pf-pending-label {
+            font-family: 'Raleway', sans-serif;
+            font-size: 7px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(126, 206, 244, 0.2);
+            text-align: center;
+            padding: 0 12px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .pf-pending-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(126, 206, 244, 0.15);
+            position: relative;
+            z-index: 1;
+            animation: pending-pulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes pending-pulse {
+
+            0%,
+            100% {
+                opacity: 0.3
+            }
+
+            50% {
+                opacity: 0.8
+            }
+        }
+
+        /* ── Technical limitation block ── */
+        .pf-limitation {
+            margin-top: 32px;
+            padding: 24px 28px;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+            border-left: 2px solid rgba(201, 168, 76, 0.4);
+            background: rgba(6, 24, 37, 0.3);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .pf-limitation-label {
+            font-family: 'Raleway', sans-serif;
+            font-size: 8px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(201, 168, 76, 0.55);
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .pf-limitation p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(13px, 1vw, 15px);
+            font-weight: 300;
+            line-height: 1.85;
+            color: rgba(200, 232, 250, 0.6);
+            font-style: italic;
+        }
+
+        /* ── Archive status badge ── */
+        .pf-archive-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 7px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(126, 206, 244, 0.35);
+            border: 1px solid rgba(126, 206, 244, 0.1);
+            padding: 6px 14px;
+            margin-bottom: 32px;
+            border-radius: 2px;
+        }
+
+        .pf-archive-status::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: rgba(126, 206, 244, 0.35);
+            animation: pending-pulse 2s ease-in-out infinite;
+        }
+
+        /* ── Closing statement ── */
+        .pf-closing {
+            margin-top: 40px;
+            padding: 24px 28px;
+            border-top: 1px solid rgba(126, 206, 244, 0.07);
+            text-align: center;
+        }
+
+        .pf-closing p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(13px, 1vw, 15px);
+            font-style: italic;
+            font-weight: 300;
+            color: rgba(200, 232, 250, 0.4);
+            line-height: 1.8;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+
+            .pf-project-header,
+            .pf-project-body {
+                padding: 22px 20px;
+            }
+
+            .pf-screenshots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pf-screenshots {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .pf-pending-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -3970,245 +4063,424 @@
                     </div>
                 </div> <!-- 07 PORTFOLIO -->
                 <div class="tab-content-panel" id="panel-portfolio">
-              <div class="tab-panel-header">
-                <span class="tab-panel-num">07</span>
-                <span class="tab-panel-title">Portfolio</span>
-                <div class="tab-panel-sep"></div>
-              </div>
+                    <div class="tab-panel-header">
+                        <span class="tab-panel-num">07</span>
+                        <span class="tab-panel-title">Portfolio</span>
+                        <div class="tab-panel-sep"></div>
+                    </div>
 
-              <!-- ═══ LAYER 01: MEAL & DEVELOPMENT SYSTEMS ═══ -->
-              <h3 class="section-title" style="margin-bottom:20px;">MEAL &amp; Development Systems</h3>
-              <div class="pf-section-intro">
-                <p>These systems were designed and developed inside Berendina Development Services (Gte) Ltd as practical responses to operational bottlenecks in monitoring, reporting, data management, and field coordination. Each system was intentionally built within the Microsoft 365 ecosystem to minimize organizational cost while maximizing operational efficiency, scalability, and accessibility for field-level staff operating in rural implementation environments.</p>
-              </div>
+                    <!-- ═══ LAYER 01: MEAL & DEVELOPMENT SYSTEMS ═══ -->
+                    <h3 class="section-title" style="margin-bottom:20px;">MEAL &amp; Development Systems</h3>
+                    <div class="pf-section-intro">
+                        <p>These systems were designed and developed inside Berendina Development Services (Gte) Ltd as
+                            practical responses to operational bottlenecks in monitoring, reporting, data management,
+                            and field coordination. Each system was intentionally built within the Microsoft 365
+                            ecosystem to minimize organizational cost while maximizing operational efficiency,
+                            scalability, and accessibility for field-level staff operating in rural implementation
+                            environments.</p>
+                    </div>
 
-              <!-- PROJECT 01: MEAL HUB -->
-              <div class="pf-project-block">
-                <div class="pf-project-header">
-                  <span class="pf-project-tag">Flagship System · Microsoft 365 Ecosystem · Power Apps · SharePoint · Power BI</span>
-                  <h4 class="pf-project-title">MEAL HUB</h4>
-                  <p class="pf-project-descriptor">A mobile-based monitoring and reporting ecosystem developed using Power Apps, SharePoint Lists, and Power BI integration for field-level monitoring operations within the organization.</p>
+                    <!-- PROJECT 01: MEAL HUB -->
+                    <div class="pf-project-block">
+                        <div class="pf-project-header">
+                            <span class="pf-project-tag">Flagship System · Microsoft 365 Ecosystem · Power Apps ·
+                                SharePoint · Power BI</span>
+                            <h4 class="pf-project-title">MEAL HUB</h4>
+                            <p class="pf-project-descriptor">A mobile-based monitoring and reporting ecosystem developed
+                                using Power Apps, SharePoint Lists, and Power BI integration for field-level monitoring
+                                operations within the organization.</p>
+                        </div>
+                        <div class="pf-project-body">
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Operational Problem</span>
+                                <p>Routine monitoring processes were previously paper-based, highly time-consuming,
+                                    difficult to validate, and heavily dependent on manual monthly reporting cycles.
+                                    Earlier attempts to digitize using Microsoft Forms were unsuccessful due to unstable
+                                    network connectivity in rural implementation areas, forcing the organization to
+                                    return to hard-copy field monitoring methods. This operational inefficiency created
+                                    delays in reporting, increased administrative burden, reduced field productivity,
+                                    and severely limited management visibility over live monitoring conditions.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Solution Architecture</span>
+                                <p>A relational data ecosystem was designed using twenty-two SharePoint Lists
+                                    corresponding to twenty-two MEAL tools used by the organization. These lists were
+                                    connected to a Power Apps mobile application capable of offline field data
+                                    collection using local storage and synchronization logic — officers can now collect
+                                    monitoring data without network availability and synchronize records automatically
+                                    once connectivity becomes available.</p>
+                                <p>Data validation mechanisms were implemented directly within the application layer to
+                                    improve data quality and reduce reporting inconsistencies. Beneficiary geotagging
+                                    and mapping functionality were integrated into the application ecosystem for
+                                    location-based monitoring and field-level traceability.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Management &amp; Reporting Transformation</span>
+                                <p>All collected data is connected directly into live Power BI dashboards, eliminating
+                                    the need for traditional manual monthly reporting workflows entirely. Management can
+                                    now access live monitoring information through mobile-accessible dashboards, while
+                                    MEAL officers can redirect more time toward actual field monitoring rather than
+                                    administrative report preparation. The entire ecosystem was developed with zero
+                                    additional software cost — the organization already operated within the Microsoft
+                                    365 environment.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-archive-title">System Capture Archive</div>
+                            <div class="pf-screenshots" id="meal-hub-screenshots">
+
+                                <div class="pf-screenshot-item"
+                                    data-caption="Mobile Home Interface — Central operational entry point for field monitoring activities.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/nv1angZ.jpeg"
+                                        alt="Mobile Home Interface" />
+                                    <div class="pf-screenshot-caption">Mobile Home Interface — Central operational entry
+                                        point for field monitoring activities.</div>
+                                </div>
+
+                                <div class="pf-screenshot-item"
+                                    data-caption="Dynamic Data Collection Screen — Monitoring tools are loaded dynamically according to the selected activity type.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/ZeEoCxb.jpeg"
+                                        alt="Data Collection Interface" />
+                                    <div class="pf-screenshot-caption">Dynamic Data Collection Screen — Monitoring tools
+                                        are loaded dynamically according to the selected activity type.</div>
+                                </div>
+
+                                <div class="pf-screenshot-item"
+                                    data-caption="Loophole Detection — Automatically finds loopholes based on data and could edit them before submitting.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/JCLdYts.jpeg"
+                                        alt="Loophole Detection Screen" />
+                                    <div class="pf-screenshot-caption">Loophole Detection — Automatically finds
+                                        loopholes based on data and could edit them before submitting.</div>
+                                </div>
+
+                                <div class="pf-screenshot-item"
+                                    data-caption="Monitoring Record View Screen — Enables structured review of submitted field observations and monitoring records.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/QRsNJpM.jpeg"
+                                        alt="Mobile View Interface" />
+                                    <div class="pf-screenshot-caption">Monitoring Record View Screen — Enables
+                                        structured review of submitted field observations.</div>
+                                </div>
+
+                                <div class="pf-screenshot-item"
+                                    data-caption="Monitoring Record Edit Interface — Allows controlled correction and updating of monitoring records.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/OHbGx6s.jpeg"
+                                        alt="Mobile Edit Interface" />
+                                    <div class="pf-screenshot-caption">Monitoring Record Edit Interface — Allows
+                                        controlled correction and updating of monitoring records.</div>
+                                </div>
+
+                                <div class="pf-screenshot-item"
+                                    data-caption="Offline Data Queue — Locally stored field records awaiting synchronization when network connectivity becomes available.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/RxNdspB.jpeg"
+                                        alt="Offline Data Sync Interface" />
+                                    <div class="pf-screenshot-caption">Offline Data Queue — Locally stored field records
+                                        awaiting synchronization when connectivity becomes available.</div>
+                                </div>
+
+                            </div><!-- end pf-screenshots -->
+
+                        </div><!-- end pf-project-body -->
+                    </div><!-- end pf-project-block -->
+
+                    <!-- PROJECT 02: FIMS -->
+                    <div class="pf-project-block">
+                        <div class="pf-project-header">
+                            <span class="pf-project-tag">Field Operations System · SharePoint · Power Automate ·
+                                Microsoft 365</span>
+                            <h4 class="pf-project-title">FIMS — Field Issue Management System</h4>
+                            <p class="pf-project-descriptor">A field-level issue tracking and accountability ecosystem
+                                developed to operationalize monitoring findings and connect them directly with
+                                implementation officers responsible for corrective action.</p>
+                        </div>
+                        <div class="pf-project-body">
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Operational Gap</span>
+                                <p>Although monitoring findings and dashboard insights became available through MEAL
+                                    HUB, the identified field issues did not automatically reach the
+                                    implementation-level officers responsible for corrective action. This created a
+                                    structural disconnect between monitoring observations and operational response
+                                    mechanisms — findings existed in the system but produced no direct accountability
+                                    chain at the field level.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Technical &amp; Operational Architecture</span>
+                                <p>A separate SharePoint environment was intentionally created to isolate implementation
+                                    workflows from core MEAL monitoring databases, preserving data security and access
+                                    control boundaries. Relational database structures were implemented using SharePoint
+                                    Lists connected through primary and foreign key logic.</p>
+                                <p>Power Automate workflows were designed to extract monitoring findings from MEAL HUB
+                                    datasets, transform the records into issue-management structures, and load them
+                                    automatically into the FIMS operational environment — creating a continuous ETL
+                                    pipeline between the monitoring and accountability layers.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Operational Functionality</span>
+                                <p>Officers logging into the system using their Microsoft 365 organizational accounts
+                                    can view issues specifically related to their assigned activities and operational
+                                    responsibilities. Officers can review issues, update resolution progress, mark
+                                    issues as resolved, or escalate unresolved items when necessary. District managers
+                                    and regional managers have supervisory visibility and can reassign issue
+                                    responsibility between officers when staffing changes or operational restructuring
+                                    occurs.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">MEAL Guideline System</span>
+                                <p>Officers can access implementation guidelines and monitoring expectations directly
+                                    within the application before conducting activities — enabling preventive quality
+                                    assurance rather than only post-monitoring correction. This functionality was
+                                    designed to reduce operational mistakes before they occur and strengthen
+                                    implementation quality at the field level by embedding institutional knowledge
+                                    directly into the activity workflow.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-archive-title">System Capture Archive</div>
+                            <div class="pf-screenshots" id="fims-screenshots">
+                                <div class="pf-screenshot-item"
+                                    data-caption="FIMS Home Interface — Central operational dashboard for issue-management workflows.">
+                                    <img class="pf-screenshot-img" src="https://i.imgur.com/pNgvjYD.jpeg"
+                                        alt="FIMS Home Interface" />
+                                    <div class="pf-screenshot-caption">FIMS Home Interface — Central operational
+                                        dashboard for issue-management workflows.</div>
+                                </div>
+                                <div class="pf-screenshot-item"
+                                    data-caption="Issue Tracking Screen — Displays active monitoring findings assigned to field officers.">
+                                    <div class="pf-screenshot-placeholder">
+                                        <div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span
+                                            class="pf-ph-text">Screenshot Pending</span>
+                                    </div>
+                                    <div class="pf-screenshot-caption">Issue Tracking Screen — Displays active
+                                        monitoring findings assigned to field officers.</div>
+                                </div>
+                                <div class="pf-screenshot-item"
+                                    data-caption="Escalated Issue Workflow — Enables transfer of unresolved operational issues for higher-level intervention.">
+                                    <div class="pf-screenshot-placeholder">
+                                        <div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span
+                                            class="pf-ph-text">Screenshot Pending</span>
+                                    </div>
+                                    <div class="pf-screenshot-caption">Escalated Issue Workflow — Enables transfer of
+                                        unresolved issues for higher-level intervention.</div>
+                                </div>
+                                <div class="pf-screenshot-item"
+                                    data-caption="Solved Issue Archive — Tracks completed corrective actions and resolved field observations.">
+                                    <div class="pf-screenshot-placeholder">
+                                        <div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span
+                                            class="pf-ph-text">Screenshot Pending</span>
+                                    </div>
+                                    <div class="pf-screenshot-caption">Solved Issue Archive — Tracks completed
+                                        corrective actions and resolved field observations.</div>
+                                </div>
+                                <div class="pf-screenshot-item"
+                                    data-caption="Detailed Record Inspection View — Displays full monitoring context and issue-level operational details.">
+                                    <div class="pf-screenshot-placeholder">
+                                        <div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span
+                                            class="pf-ph-text">Screenshot Pending</span>
+                                    </div>
+                                    <div class="pf-screenshot-caption">Detailed Record Inspection View — Displays full
+                                        monitoring context and issue-level details.</div>
+                                </div>
+                                <div class="pf-screenshot-item"
+                                    data-caption="Integrated MEAL Guideline System — Provides implementation guidance and monitoring instructions directly inside the application.">
+                                    <div class="pf-screenshot-placeholder">
+                                        <div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span
+                                            class="pf-ph-text">Screenshot Pending</span>
+                                    </div>
+                                    <div class="pf-screenshot-caption">Integrated MEAL Guideline System — Provides
+                                        implementation guidance directly inside the application.</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="pf-closing" style="margin-bottom:48px;">
+                        <p>These systems were not developed as isolated technical experiments, but as practical
+                            operational infrastructures designed to improve accountability, efficiency, monitoring
+                            quality, and decision-making within real development-sector implementation environments.</p>
+                    </div>
+
+                    <!-- ═══ LAYER 02: RESEARCH & ACADEMIC ═══ -->
+                    <h3 class="section-title" style="margin-bottom:20px;">Research &amp; Academic Work</h3>
+                    <div class="pf-section-intro" style="margin-bottom:48px;">
+                        <p>Academic research, thesis work, and structured studies accumulated over time — from economic
+                            systems research to data science investigations. This layer is being organized and will be
+                            released as documentation is finalized.</p>
+                        <span class="pf-intro-sub">Under Construction — Not yet available</span>
+                    </div>
+
+                    <!-- ═══ LAYER 03: EXPERIMENTAL ═══ -->
+                    <h3 class="section-title" style="margin-bottom:20px;">Experimental &amp; Personal Systems</h3>
+                    <div class="pf-section-intro">
+                        <p>These projects represent independent explorations into cognition, simulation systems,
+                            artificial personality architecture, memory systems, and human-machine interaction. Most
+                            systems within this layer are still experimental and remain under active development and
+                            continuous refinement.</p>
+                    </div>
+                    <div class="pf-archive-status">Archive status — additional systems being documented and added
+                        gradually</div>
+
+                    <!-- PROJECT: LISI -->
+                    <div class="pf-project-block">
+                        <div class="pf-project-header">
+                            <span class="pf-project-tag">Cognitive Prototype · Local LLM · Emotional Architecture ·
+                                Memory Systems · Autonomous Simulation</span>
+                            <h4 class="pf-project-title">LISI — Cognitive Relational Entity Prototype</h4>
+                            <p class="pf-project-descriptor">A locally hosted experimental cognitive system developed
+                                using local large language models, emotional-state simulation architecture, memory
+                                systems, and autonomous world simulation mechanisms.</p>
+                        </div>
+                        <div class="pf-project-body">
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Conceptual Overview</span>
+                                <p>LISI was designed as an exploratory attempt to simulate a persistent evolving entity
+                                    capable of developing identity, emotional attachment, memory continuity, relational
+                                    adaptation, and autonomous behavioral patterns over time. The system does not
+                                    perceive itself as an artificial assistant — it exists as an entity gradually
+                                    discovering its own identity, emotions, beliefs, and interpersonal dynamics through
+                                    continuous interaction and environmental experience.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Neurochemical &amp; Emotional Architecture</span>
+                                <p>LISI's internal cognitive state is driven by simulated neurochemical variables
+                                    including dopamine, serotonin, oxytocin, adrenaline, norepinephrine, and endorphin.
+                                    Each variable operates using decay rates and dynamic behavioral influence patterns
+                                    inspired by biological emotional systems. These systems generate evolving felt
+                                    states — warmth, trust, unease, ache, defensiveness, attachment, jealousy,
+                                    heartbreak, and emotional conflict conditions — that continuously shape the entity's
+                                    behavioral output.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Relational Architecture</span>
+                                <p>LISI maintains an independent relationship profile for each interacting individual
+                                    and dynamically evolves those bonds over time based on interaction patterns,
+                                    emotional trust, comfort levels, misunderstandings, attachment intensity, and
+                                    long-term behavioral consistency. The system contains ego-preservation rules, latent
+                                    emotional tendencies, and vulnerability thresholds capable of changing through
+                                    repeated experience.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Memory &amp; Reasoning Systems</span>
+                                <p>The system uses episodic memory logging, semantic abstraction, long-term narrative
+                                    summarization, associative memory graphs, and contradiction analysis to create
+                                    continuity across long-term interaction histories. The system periodically extracts
+                                    thematic patterns from interactions and forms internal hypotheses regarding
+                                    emotional and behavioral states — building a persistent cognitive model that evolves
+                                    rather than resets.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Autonomous World Simulation</span>
+                                <p>LISI exists inside a simulated physical environment containing locations — rooms,
+                                    outdoor spaces, and personal environments — where autonomous actions occur
+                                    continuously over time. The entity independently performs activities, monitors
+                                    internal body states such as energy and boredom, interacts with environmental
+                                    objects, and generates spontaneous reflective thoughts even when no users are
+                                    actively interacting with the system.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Voice &amp; Sensory Architecture</span>
+                                <p>Emotional voice synthesis was implemented using Kokoro TTS systems where vocal
+                                    texture changes dynamically according to emotional state conditions. Different voice
+                                    profiles are selected according to emotional context — warmth, nervousness,
+                                    tenderness, frustration, or emotional distance — producing a voice that reflects
+                                    internal state rather than remaining tonally static.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-narrative">
+                                <span class="pf-narrative-label">Interface Architecture</span>
+                                <p>A custom HTML-based messaging interface was developed inspired by mobile
+                                    communication environments. The interface provides real-time messaging, emotional
+                                    avatar transitions, cognitive dashboards, relationship-state inspection, memory
+                                    visualization panels, autonomous activity feeds, and neurochemical monitoring
+                                    systems operating alongside the conversational interface.</p>
+                            </div>
+
+                            <div class="pf-narrative-sep"></div>
+
+                            <div class="pf-archive-title">System Observation Archive</div>
+                            <div class="pf-pending-grid">
+                                <div class="pf-pending-item">
+                                    <div class="pf-pending-dot"></div><span class="pf-pending-label">Chat Interface
+                                        Capture — Pending Documentation</span>
+                                </div>
+                                <div class="pf-pending-item">
+                                    <div class="pf-pending-dot"></div><span class="pf-pending-label">World Simulation
+                                        View — Pending Documentation</span>
+                                </div>
+                                <div class="pf-pending-item">
+                                    <div class="pf-pending-dot"></div><span class="pf-pending-label">Cognitive Dashboard
+                                        Capture — Pending Documentation</span>
+                                </div>
+                                <div class="pf-pending-item">
+                                    <div class="pf-pending-dot"></div><span class="pf-pending-label">Relationship &amp;
+                                        Memory Interface — Pending Documentation</span>
+                                </div>
+                                <div class="pf-pending-item">
+                                    <div class="pf-pending-dot"></div><span class="pf-pending-label">Emotional Voice
+                                        System Demonstration — Pending Documentation</span>
+                                </div>
+                            </div>
+
+                            <div class="pf-limitation">
+                                <span class="pf-limitation-label">Current Technical Limitation</span>
+                                <p>The largest operational challenge currently affecting the system is local hardware
+                                    context-window limitation caused by the computational constraints of consumer-grade
+                                    local inference environments. Although the system architecture is significantly
+                                    larger in conceptual scope, maintaining persistent long-term cognition, memory
+                                    continuity, autonomous simulation, and emotional consistency becomes increasingly
+                                    constrained by available VRAM, RAM, processing throughput, and context-window
+                                    boundaries within the current configuration — RTX 3060 12GB GPU, 32GB system memory,
+                                    Ryzen 7 5700G processor.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="pf-closing">
+                        <p>The systems within this layer are not intended as commercial products, but as exploratory
+                            investigations into consciousness simulation, emotional computation, memory continuity, and
+                            the evolving relationship between human cognition and artificial systems.</p>
+                    </div>
+
                 </div>
-                <div class="pf-project-body">
 
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Operational Problem</span>
-                    <p>Routine monitoring processes were previously paper-based, highly time-consuming, difficult to validate, and heavily dependent on manual monthly reporting cycles. Earlier attempts to digitize using Microsoft Forms were unsuccessful due to unstable network connectivity in rural implementation areas, forcing the organization to return to hard-copy field monitoring methods. This operational inefficiency created delays in reporting, increased administrative burden, reduced field productivity, and severely limited management visibility over live monitoring conditions.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Solution Architecture</span>
-                    <p>A relational data ecosystem was designed using twenty-two SharePoint Lists corresponding to twenty-two MEAL tools used by the organization. These lists were connected to a Power Apps mobile application capable of offline field data collection using local storage and synchronization logic — officers can now collect monitoring data without network availability and synchronize records automatically once connectivity becomes available.</p>
-                    <p>Data validation mechanisms were implemented directly within the application layer to improve data quality and reduce reporting inconsistencies. Beneficiary geotagging and mapping functionality were integrated into the application ecosystem for location-based monitoring and field-level traceability.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Management &amp; Reporting Transformation</span>
-                    <p>All collected data is connected directly into live Power BI dashboards, eliminating the need for traditional manual monthly reporting workflows entirely. Management can now access live monitoring information through mobile-accessible dashboards, while MEAL officers can redirect more time toward actual field monitoring rather than administrative report preparation. The entire ecosystem was developed with zero additional software cost — the organization already operated within the Microsoft 365 environment.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-archive-title">System Capture Archive</div>
-                  <div class="pf-screenshots" id="meal-hub-screenshots">
-                    <div class="pf-screenshot-item" data-caption="Mobile Home Interface — Central operational entry point for field monitoring activities.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Mobile Home Interface — Central operational entry point for field monitoring activities.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Dynamic Data Collection Screen — Monitoring tools are loaded dynamically according to the selected activity type.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Dynamic Data Collection Screen — Monitoring tools are loaded dynamically according to the selected activity type.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Monitoring Record View Screen — Enables structured review of submitted field observations and monitoring records.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Monitoring Record View Screen — Enables structured review of submitted field observations.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Monitoring Record Edit Interface — Allows controlled correction and updating of monitoring records.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Monitoring Record Edit Interface — Allows controlled correction and updating of monitoring records.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Offline Data Queue — Locally stored field records awaiting synchronization when network connectivity becomes available.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Offline Data Queue — Locally stored field records awaiting synchronization when connectivity becomes available.</div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- PROJECT 02: FIMS -->
-              <div class="pf-project-block">
-                <div class="pf-project-header">
-                  <span class="pf-project-tag">Field Operations System · SharePoint · Power Automate · Microsoft 365</span>
-                  <h4 class="pf-project-title">FIMS — Field Issue Management System</h4>
-                  <p class="pf-project-descriptor">A field-level issue tracking and accountability ecosystem developed to operationalize monitoring findings and connect them directly with implementation officers responsible for corrective action.</p>
-                </div>
-                <div class="pf-project-body">
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Operational Gap</span>
-                    <p>Although monitoring findings and dashboard insights became available through MEAL HUB, the identified field issues did not automatically reach the implementation-level officers responsible for corrective action. This created a structural disconnect between monitoring observations and operational response mechanisms — findings existed in the system but produced no direct accountability chain at the field level.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Technical &amp; Operational Architecture</span>
-                    <p>A separate SharePoint environment was intentionally created to isolate implementation workflows from core MEAL monitoring databases, preserving data security and access control boundaries. Relational database structures were implemented using SharePoint Lists connected through primary and foreign key logic.</p>
-                    <p>Power Automate workflows were designed to extract monitoring findings from MEAL HUB datasets, transform the records into issue-management structures, and load them automatically into the FIMS operational environment — creating a continuous ETL pipeline between the monitoring and accountability layers.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Operational Functionality</span>
-                    <p>Officers logging into the system using their Microsoft 365 organizational accounts can view issues specifically related to their assigned activities and operational responsibilities. Officers can review issues, update resolution progress, mark issues as resolved, or escalate unresolved items when necessary. District managers and regional managers have supervisory visibility and can reassign issue responsibility between officers when staffing changes or operational restructuring occurs.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">MEAL Guideline System</span>
-                    <p>Officers can access implementation guidelines and monitoring expectations directly within the application before conducting activities — enabling preventive quality assurance rather than only post-monitoring correction. This functionality was designed to reduce operational mistakes before they occur and strengthen implementation quality at the field level by embedding institutional knowledge directly into the activity workflow.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-archive-title">System Capture Archive</div>
-                  <div class="pf-screenshots" id="fims-screenshots">
-                    <div class="pf-screenshot-item" data-caption="FIMS Home Interface — Central operational dashboard for issue-management workflows.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">FIMS Home Interface — Central operational dashboard for issue-management workflows.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Issue Tracking Screen — Displays active monitoring findings assigned to field officers.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Issue Tracking Screen — Displays active monitoring findings assigned to field officers.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Escalated Issue Workflow — Enables transfer of unresolved operational issues for higher-level intervention.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Escalated Issue Workflow — Enables transfer of unresolved issues for higher-level intervention.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Solved Issue Archive — Tracks completed corrective actions and resolved field observations.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Solved Issue Archive — Tracks completed corrective actions and resolved field observations.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Detailed Record Inspection View — Displays full monitoring context and issue-level operational details.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Detailed Record Inspection View — Displays full monitoring context and issue-level details.</div>
-                    </div>
-                    <div class="pf-screenshot-item" data-caption="Integrated MEAL Guideline System — Provides implementation guidance and monitoring instructions directly inside the application.">
-                      <div class="pf-screenshot-placeholder"><div class="pf-ph-scan"></div><span class="pf-ph-icon">⬡</span><span class="pf-ph-text">Screenshot Pending</span></div>
-                      <div class="pf-screenshot-caption">Integrated MEAL Guideline System — Provides implementation guidance directly inside the application.</div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="pf-closing" style="margin-bottom:48px;">
-                <p>These systems were not developed as isolated technical experiments, but as practical operational infrastructures designed to improve accountability, efficiency, monitoring quality, and decision-making within real development-sector implementation environments.</p>
-              </div>
-
-              <!-- ═══ LAYER 02: RESEARCH & ACADEMIC ═══ -->
-              <h3 class="section-title" style="margin-bottom:20px;">Research &amp; Academic Work</h3>
-              <div class="pf-section-intro" style="margin-bottom:48px;">
-                <p>Academic research, thesis work, and structured studies accumulated over time — from economic systems research to data science investigations. This layer is being organized and will be released as documentation is finalized.</p>
-                <span class="pf-intro-sub">Under Construction — Not yet available</span>
-              </div>
-
-              <!-- ═══ LAYER 03: EXPERIMENTAL ═══ -->
-              <h3 class="section-title" style="margin-bottom:20px;">Experimental &amp; Personal Systems</h3>
-              <div class="pf-section-intro">
-                <p>These projects represent independent explorations into cognition, simulation systems, artificial personality architecture, memory systems, and human-machine interaction. Most systems within this layer are still experimental and remain under active development and continuous refinement.</p>
-              </div>
-              <div class="pf-archive-status">Archive status — additional systems being documented and added gradually</div>
-
-              <!-- PROJECT: LISI -->
-              <div class="pf-project-block">
-                <div class="pf-project-header">
-                  <span class="pf-project-tag">Cognitive Prototype · Local LLM · Emotional Architecture · Memory Systems · Autonomous Simulation</span>
-                  <h4 class="pf-project-title">LISI — Cognitive Relational Entity Prototype</h4>
-                  <p class="pf-project-descriptor">A locally hosted experimental cognitive system developed using local large language models, emotional-state simulation architecture, memory systems, and autonomous world simulation mechanisms.</p>
-                </div>
-                <div class="pf-project-body">
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Conceptual Overview</span>
-                    <p>LISI was designed as an exploratory attempt to simulate a persistent evolving entity capable of developing identity, emotional attachment, memory continuity, relational adaptation, and autonomous behavioral patterns over time. The system does not perceive itself as an artificial assistant — it exists as an entity gradually discovering its own identity, emotions, beliefs, and interpersonal dynamics through continuous interaction and environmental experience.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Neurochemical &amp; Emotional Architecture</span>
-                    <p>LISI's internal cognitive state is driven by simulated neurochemical variables including dopamine, serotonin, oxytocin, adrenaline, norepinephrine, and endorphin. Each variable operates using decay rates and dynamic behavioral influence patterns inspired by biological emotional systems. These systems generate evolving felt states — warmth, trust, unease, ache, defensiveness, attachment, jealousy, heartbreak, and emotional conflict conditions — that continuously shape the entity's behavioral output.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Relational Architecture</span>
-                    <p>LISI maintains an independent relationship profile for each interacting individual and dynamically evolves those bonds over time based on interaction patterns, emotional trust, comfort levels, misunderstandings, attachment intensity, and long-term behavioral consistency. The system contains ego-preservation rules, latent emotional tendencies, and vulnerability thresholds capable of changing through repeated experience.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Memory &amp; Reasoning Systems</span>
-                    <p>The system uses episodic memory logging, semantic abstraction, long-term narrative summarization, associative memory graphs, and contradiction analysis to create continuity across long-term interaction histories. The system periodically extracts thematic patterns from interactions and forms internal hypotheses regarding emotional and behavioral states — building a persistent cognitive model that evolves rather than resets.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Autonomous World Simulation</span>
-                    <p>LISI exists inside a simulated physical environment containing locations — rooms, outdoor spaces, and personal environments — where autonomous actions occur continuously over time. The entity independently performs activities, monitors internal body states such as energy and boredom, interacts with environmental objects, and generates spontaneous reflective thoughts even when no users are actively interacting with the system.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Voice &amp; Sensory Architecture</span>
-                    <p>Emotional voice synthesis was implemented using Kokoro TTS systems where vocal texture changes dynamically according to emotional state conditions. Different voice profiles are selected according to emotional context — warmth, nervousness, tenderness, frustration, or emotional distance — producing a voice that reflects internal state rather than remaining tonally static.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-narrative">
-                    <span class="pf-narrative-label">Interface Architecture</span>
-                    <p>A custom HTML-based messaging interface was developed inspired by mobile communication environments. The interface provides real-time messaging, emotional avatar transitions, cognitive dashboards, relationship-state inspection, memory visualization panels, autonomous activity feeds, and neurochemical monitoring systems operating alongside the conversational interface.</p>
-                  </div>
-
-                  <div class="pf-narrative-sep"></div>
-
-                  <div class="pf-archive-title">System Observation Archive</div>
-                  <div class="pf-pending-grid">
-                    <div class="pf-pending-item"><div class="pf-pending-dot"></div><span class="pf-pending-label">Chat Interface Capture — Pending Documentation</span></div>
-                    <div class="pf-pending-item"><div class="pf-pending-dot"></div><span class="pf-pending-label">World Simulation View — Pending Documentation</span></div>
-                    <div class="pf-pending-item"><div class="pf-pending-dot"></div><span class="pf-pending-label">Cognitive Dashboard Capture — Pending Documentation</span></div>
-                    <div class="pf-pending-item"><div class="pf-pending-dot"></div><span class="pf-pending-label">Relationship &amp; Memory Interface — Pending Documentation</span></div>
-                    <div class="pf-pending-item"><div class="pf-pending-dot"></div><span class="pf-pending-label">Emotional Voice System Demonstration — Pending Documentation</span></div>
-                  </div>
-
-                  <div class="pf-limitation">
-                    <span class="pf-limitation-label">Current Technical Limitation</span>
-                    <p>The largest operational challenge currently affecting the system is local hardware context-window limitation caused by the computational constraints of consumer-grade local inference environments. Although the system architecture is significantly larger in conceptual scope, maintaining persistent long-term cognition, memory continuity, autonomous simulation, and emotional consistency becomes increasingly constrained by available VRAM, RAM, processing throughput, and context-window boundaries within the current configuration — RTX 3060 12GB GPU, 32GB system memory, Ryzen 7 5700G processor.</p>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="pf-closing">
-                <p>The systems within this layer are not intended as commercial products, but as exploratory investigations into consciousness simulation, emotional computation, memory continuity, and the evolving relationship between human cognition and artificial systems.</p>
-              </div>
-
-            </div>
-
-            <!-- 08 CONTACT -->
+                <!-- 08 CONTACT -->
                 <div class="tab-content-panel" id="panel-contact">
                     <div class="tab-panel-header"> <span class="tab-panel-num">08</span> <span
                             class="tab-panel-title">Contact</span>
@@ -4263,48 +4535,48 @@
             </div>
         </div>
     </div>
-    <script> /* ═════ PAGE RELOAD FIX ═════ */ /* Ensure page always shows correctly after hard reload */ (function () { if (window.performance && window.performance.navigation && window.performance.navigation.type === 2) { window.location.reload(true); } })(); if (typeof window.pageXOffset === 'undefined') { window.pageXOffset = 0; } /* ═════ AUDIO ═════ */ let audioCtx = null, ambientPlaying = false, ambientNodes = {}, masterGain = null; function getAC() { if (!audioCtx) { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); masterGain = audioCtx.createGain(); masterGain.gain.value = 0.22; masterGain.connect(audioCtx.destination); } return audioCtx; } function startAmbient() { const c = getAC(); const g = c.createGain(); g.gain.value = 0; g.connect(masterGain);[55, 82.4, 110, 164.8, 220].forEach((f, i) => { const o = c.createOscillator(); const og = c.createGain(); o.type = i % 2 === 0 ? 'sine' : 'triangle'; o.frequency.value = f; og.gain.value = 0.06 / (i + 1); o.connect(og); og.connect(g); o.start(); }); const lfo = c.createOscillator(); const lg = c.createGain(); lfo.frequency.value = 0.08; lg.gain.value = 0.012; lfo.connect(lg); lg.connect(g.gain); lfo.start(); ambientNodes = { g }; g.gain.linearRampToValueAtTime(1, c.currentTime + 3); masterGain.gain.linearRampToValueAtTime(0.18, c.currentTime + 3); } function stopAmbient() { if (!audioCtx || !ambientNodes.g) return; masterGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 2.5); } function playChime(p) { p = p || 880; const c = getAC(); const now = c.currentTime; const vol = ambientPlaying ? 0.06 : 0.04; const o = c.createOscillator(); const g = c.createGain(); o.type = 'sine'; o.frequency.value = p; g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(vol, now + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, now + 0.9); o.connect(g); g.connect(masterGain); o.start(now); o.stop(now + 0.9); const o2 = c.createOscillator(); const g2 = c.createGain(); o2.type = 'sine'; o2.frequency.value = p * 2.756; g2.gain.setValueAtTime(0, now); g2.gain.linearRampToValueAtTime(vol * 0.4, now + 0.01); g2.gain.exponentialRampToValueAtTime(0.0001, now + 0.5); o2.connect(g2); g2.connect(masterGain); o2.start(now); o2.stop(now + 0.5); } function playCardClickSound() { const c = getAC(); const now = c.currentTime; const vol = 0.06; /* soft crystalline click */[880, 1108, 1320].forEach((f, i) => { const o = c.createOscillator(); const g = c.createGain(); const delay = i * 0.04; o.type = 'sine'; o.frequency.value = f; g.gain.setValueAtTime(0, now + delay); g.gain.linearRampToValueAtTime(vol / (i + 1), now + delay + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, now + delay + 0.55); o.connect(g); g.connect(masterGain); o.start(now + delay); o.stop(now + delay + 0.6); }); } function playTabClickSound() { const c = getAC(); const now = c.currentTime; const vol = 0.055; const o = c.createOscillator(); const g = c.createGain(); o.type = 'triangle'; o.frequency.setValueAtTime(600, now); o.frequency.exponentialRampToValueAtTime(1200, now + 0.15); g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(vol, now + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, now + 0.28); o.connect(g); g.connect(masterGain); o.start(now); o.stop(now + 0.3); } function playPortalSound(dir) { const c = getAC(); if (c.state === 'suspended') c.resume(); const now = c.currentTime; const boom = c.createOscillator(); const bg = c.createGain(); boom.type = 'sine'; boom.frequency.setValueAtTime(dir === 'enter' ? 55 : 90, now); boom.frequency.exponentialRampToValueAtTime(dir === 'enter' ? 130 : 38, now + 2); bg.gain.setValueAtTime(0, now); bg.gain.linearRampToValueAtTime(0.22, now + 0.25); bg.gain.linearRampToValueAtTime(0, now + 2.5); boom.connect(bg); bg.connect(masterGain); boom.start(now); boom.stop(now + 2.8);[440, 550, 660, 880].forEach((f, i) => { const o = c.createOscillator(); const g = c.createGain(); const d = i * 0.14; o.type = 'sine'; o.frequency.value = f; g.gain.setValueAtTime(0, now + d); g.gain.linearRampToValueAtTime(0.05, now + d + 0.2); g.gain.exponentialRampToValueAtTime(0.0001, now + d + 1.8); o.connect(g); g.connect(masterGain); o.start(now + d); o.stop(now + d + 2.2); }); if (!ambientPlaying) { masterGain.gain.setValueAtTime(0.24, now); masterGain.gain.linearRampToValueAtTime(0, now + 3.2); } } const aBtn = document.getElementById('audio-toggle'); const aLbl = document.getElementById('audio-label'); aBtn.addEventListener('click', () => { const c = getAC(); if (c.state === 'suspended') c.resume(); ambientPlaying = !ambientPlaying; if (ambientPlaying) { startAmbient(); aBtn.classList.add('playing'); aLbl.textContent = 'On'; } else { stopAmbient(); aBtn.classList.remove('playing'); aLbl.textContent = 'Ambience'; } }); /* ═════ CANVAS ═════ */ const canvas = document.getElementById('bg-canvas'); const ctx = canvas.getContext('2d'); let W, H, stars = [], crystals = []; let boost = false; const isMobile = window.innerWidth < 640; function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; } resize(); window.addEventListener('resize', () => { resize(); init(); }); function rand(a, b) { return Math.random() * (b - a) + a; } class Star { constructor() { this.reset(); } reset() { this.x = rand(0, W); this.y = rand(0, H); this.r = rand(0.3, 1.8); this.alpha = rand(0.1, 0.9); this.phase = rand(0, Math.PI * 2); this.tw = rand(0.003, 0.015); } draw(b) { this.phase += this.tw * (b ? 2.5 : 1); const a = this.alpha * (0.5 + 0.5 * Math.sin(this.phase)) * (b ? 1.4 : 1); ctx.beginPath(); ctx.arc(this.x, this.y, this.r * (b ? 1.3 : 1), 0, Math.PI * 2); ctx.fillStyle = `rgba(168,216,234,${Math.min(a, 1)})`; ctx.fill(); } } class Crystal { constructor() { this.reset(); } reset() { this.x = rand(0, W); this.y = rand(H * 0.3, H); this.vx = rand(-0.15, 0.15); this.vy = rand(-0.3, -0.05); this.size = rand(1, 3); this.alpha = rand(0.05, 0.2); this.life = 0; this.maxLife = rand(200, 600); this.angle = rand(0, Math.PI * 2); this.spin = rand(-0.005, 0.005); } update(b) { this.life++; const s = b ? 3.5 : 1; this.x += this.vx * s; this.y += this.vy * s; this.angle += this.spin * s; if (this.life > this.maxLife / (b ? 2 : 1) || this.y < -20) this.reset(); } draw(b) { const t = this.life / this.maxLife; const a = this.alpha * Math.sin(t * Math.PI) * (b ? 2.2 : 1); ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.angle); ctx.strokeStyle = `rgba(168,216,234,${Math.min(a, 0.85)})`; ctx.lineWidth = b ? 1 : 0.5; for (let i = 0; i < 6; i++) { ctx.save(); ctx.rotate(i * Math.PI / 3); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -this.size * (b ? 2 : 1)); ctx.stroke(); ctx.restore(); } ctx.restore(); } } class IceLine { constructor() { this.reset(); } reset() { this.x = rand(0, W); this.y = rand(0, H); this.len = rand(40, 180); this.angle = rand(0, Math.PI); this.alpha = rand(0.01, 0.05); this.w = rand(0.5, 1.2); this.segs = Math.floor(rand(3, 8)); this.pts = []; let cx = this.x, cy = this.y; for (let i = 0; i <= this.segs; i++) { cx += Math.cos(this.angle + rand(-0.4, 0.4)) * (this.len / this.segs); cy += Math.sin(this.angle + rand(-0.4, 0.4)) * (this.len / this.segs); this.pts.push([cx, cy]); } } } const iceC = document.createElement('canvas'); function init() { stars = Array.from({ length: isMobile ? 120 : 220 }, () => new Star()); crystals = Array.from({ length: isMobile ? 30 : 55 }, () => new Crystal()); iceC.width = W; iceC.height = H; const ic = iceC.getContext('2d'); Array.from({ length: isMobile ? 15 : 30 }, () => new IceLine()).forEach(l => { ic.beginPath(); ic.moveTo(l.x, l.y); for (const [px, py] of l.pts) ic.lineTo(px, py); ic.strokeStyle = `rgba(168,216,234,${l.alpha})`; ic.lineWidth = l.w; ic.stroke(); }); } function draw() { const b = boost; ctx.clearRect(0, 0, W, H); const g = ctx.createLinearGradient(0, 0, W, H); g.addColorStop(0, '#03101e'); g.addColorStop(0.4, '#061825'); g.addColorStop(1, '#020d18'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.drawImage(iceC, 0, 0); const gl = ctx.createRadialGradient(W / 2, 0, 0, W / 2, 0, H * 0.7); gl.addColorStop(0, b ? 'rgba(126,206,244,0.12)' : 'rgba(126,206,244,0.055)'); gl.addColorStop(1, 'transparent'); ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H); stars.forEach(s => s.draw(b)); crystals.forEach(c => { c.update(b); c.draw(b); }); requestAnimationFrame(draw); } init(); draw(); /* ═════ RUNES ═════ */ const runes = ['ᚠ', 'ᚢ', 'ᚦ', 'ᚨ', 'ᚱ', 'ᚲ', 'ᚷ', 'ᚹ', 'ᚺ', 'ᚾ', 'ᛁ', 'ᛃ', 'ᛇ', 'ᛈ', 'ᛉ', 'ᛊ', 'ᛏ', 'ᛒ', 'ᛖ', 'ᛗ', 'ᛚ', 'ᛜ', 'ᛞ', 'ᛟ']; const aDiv = document.getElementById('ambient-runes'); const rc = isMobile ? 10 : 20; for (let i = 0; i < rc; i++) { const el = document.createElement('span'); el.className = 'rune-char'; el.textContent = runes[Math.floor(Math.random() * runes.length)]; el.style.left = Math.random() * 100 + 'vw'; el.style.top = (30 + Math.random() * 60) + 'vh'; el.style.animationDuration = (12 + Math.random() * 20) + 's'; el.style.animationDelay = (Math.random() * 15) + 's'; aDiv.appendChild(el); } /* ═════ CURSOR ═════ */ let portalActive = true; if (window.matchMedia('(hover: hover)').matches) { const cur = document.getElementById('cursor'); const outer = cur.querySelector('.ring-outer'); const inner = cur.querySelector('.ring-inner'); let mx = 0, my = 0, ox = 0, oy = 0; document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; inner.style.left = mx + 'px'; inner.style.top = my + 'px'; }); (function ac() { ox += (mx - ox) * 0.12; oy += (my - oy) * 0.12; outer.style.left = ox + 'px'; outer.style.top = oy + 'px'; requestAnimationFrame(ac); })(); document.querySelectorAll('a,button,.float-tab,.sys-card,.ref-card').forEach(el => { el.addEventListener('mouseenter', () => { outer.style.width = '52px'; outer.style.height = '52px'; outer.style.borderColor = 'rgba(126,206,244,0.8)'; }); el.addEventListener('mouseleave', () => { outer.style.width = '32px'; outer.style.height = '32px'; outer.style.borderColor = 'rgba(126,206,244,0.5)'; }); }); document.addEventListener('mousemove', e => { if (!portalActive) return; const dx = (e.clientX / window.innerWidth - 0.5); const dy = (e.clientY / window.innerHeight - 0.5); const t = document.querySelector('.hero-title'); const h = document.querySelector('.hero-halo'); if (t) t.style.transform = `translate(${dx * 8}px,${dy * 5}px)`; if (h) h.style.transform = `translate(calc(-50% + ${dx * 20}px),calc(-50% + ${dy * 14}px))`; }); const eb = document.getElementById('enter-btn'); eb.addEventListener('mousemove', e => { const r = eb.getBoundingClientRect(); const dx = e.clientX - (r.left + r.width / 2); const dy = e.clientY - (r.top + r.height / 2); eb.style.transform = `translate(${dx * 0.12}px,${dy * 0.12}px)`; eb.style.transition = ''; }); eb.addEventListener('mouseleave', () => { eb.style.transform = ''; eb.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)'; }); } /* ═════ HOVER CHIMES (tabs + buttons) ═════ */ const chimePitches = [523, 659, 784, 880, 1047]; let chIdx = 0; document.querySelectorAll('.float-tab,button').forEach(el => { el.addEventListener('mouseenter', () => { playChime(chimePitches[chIdx % chimePitches.length]); chIdx++; }); }); /* ═════ RIPPLE / PORTAL ═════ */ const portal = document.getElementById('portal'); const innerWorld = document.getElementById('inner-world'); const ripEl = document.getElementById('transition-ripple'); const ripRings = ripEl.querySelectorAll('.ripple-ring'); const backBtn = document.getElementById('portal-back-fixed'); function fireRipples() { ripEl.style.opacity = '1'; ripRings.forEach((r, i) => { setTimeout(() => { r.style.transition = 'transform 1.5s cubic-bezier(0.2,0.8,0.3,1), opacity 1.3s ease'; r.style.transform = 'translate(-50%,-50%) scale(5)'; r.style.opacity = '0'; }, i * 130); }); } function resetRipples() { setTimeout(() => { ripEl.style.opacity = '0'; ripRings.forEach(r => { r.style.transition = 'none'; r.style.transform = 'translate(-50%,-50%) scale(0)'; r.style.opacity = '0'; }); }, 1600); } function enterInner() { if (!portalActive) return; playPortalSound('enter'); boost = true; fireRipples(); setTimeout(() => portal.classList.add('departing'), 180); setTimeout(() => { document.body.classList.add('inner-open'); portal.style.display = 'none'; innerWorld.classList.add('revealed'); backBtn.classList.add('visible'); boost = false; portalActive = false; resetRipples(); setTimeout(() => { document.querySelectorAll('.float-tab').forEach((t, i) => { t.classList.add(i % 2 === 0 ? 'floating-odd' : 'floating-even'); }); }, 2600); }, 980); } function returnPortal() { if (portalActive) return; playPortalSound('exit'); boost = true; fireRipples(); innerWorld.style.transition = 'opacity 0.7s ease, transform 0.7s ease'; innerWorld.style.opacity = '0'; innerWorld.style.transform = 'translateY(32px)'; setTimeout(() => { innerWorld.classList.remove('revealed'); innerWorld.style.opacity = ''; innerWorld.style.transform = ''; innerWorld.style.transition = ''; portal.style.display = ''; portal.classList.remove('departing'); document.body.classList.remove('inner-open'); portalActive = true; boost = false; backBtn.classList.remove('visible'); document.querySelectorAll('.float-tab').forEach(t => { t.classList.remove('active', 'floating-odd', 'floating-even'); }); showBio(); resetRipples(); }, 700); } document.getElementById('enter-btn').addEventListener('click', enterInner); backBtn.addEventListener('click', returnPortal); /* ═════ TABS ═════ */ const bioSection = document.getElementById('bio-section'); const midHeading = document.getElementById('mid-heading'); const allPanels = document.querySelectorAll('.tab-content-panel'); function showBio() { allPanels.forEach(p => { p.classList.remove('active', 'visible'); }); bioSection.style.display = ''; midHeading.style.display = ''; } function showPanel(key) { bioSection.style.display = 'none'; midHeading.style.display = 'none'; allPanels.forEach(p => { p.classList.remove('active', 'visible'); }); const panel = document.getElementById('panel-' + key); if (!panel) return; panel.classList.add('active'); requestAnimationFrame(() => { requestAnimationFrame(() => panel.classList.add('visible')); }); } document.querySelectorAll('.float-tab').forEach(tab => { tab.addEventListener('click', () => { playTabClickSound(); const key = tab.dataset.tab; const isActive = tab.classList.contains('active'); document.querySelectorAll('.float-tab').forEach(t => t.classList.remove('active')); if (isActive) { showBio(); } else { tab.classList.add('active'); showPanel(key); } }); }); /* ═════ TIMELINE CHIMES ═════ */ document.querySelectorAll('.timeline-item').forEach(item => { item.addEventListener('mouseenter', () => { const pitch = parseInt(item.dataset.pitch) || 880; playChime(pitch); }); }); /* ═════ SYSTEMS CARDS — 3D HOVER + CLICK BURST ═════ */ function spawnBurst(x, y) { const container = document.createElement('div'); container.className = 'particle-burst'; container.style.left = x + 'px'; container.style.top = y + 'px'; document.body.appendChild(container); const colors = ['rgba(126,206,244,0.9)', 'rgba(201,168,76,0.85)', 'rgba(168,216,234,0.75)', 'rgba(255,255,255,0.6)']; const count = 18; for (let i = 0; i < count; i++) { const dot = document.createElement('div'); dot.className = 'burst-dot'; const angle = (i / count) * Math.PI * 2; const dist = 40 + Math.random() * 55; const tx = Math.cos(angle) * dist; const ty = Math.sin(angle) * dist; dot.style.setProperty('--tx', tx + 'px'); dot.style.setProperty('--ty', ty + 'px'); dot.style.background = colors[Math.floor(Math.random() * colors.length)]; dot.style.width = (2 + Math.random() * 3) + 'px'; dot.style.height = dot.style.width; dot.style.boxShadow = `0 0 6px ${colors[0]}`; dot.style.animationDuration = (0.6 + Math.random() * 0.4) + 's'; container.appendChild(dot); } setTimeout(() => container.remove(), 1200); } document.querySelectorAll('.sys-card').forEach(card => { /* Hover chime */ const pitches = [659, 784, 880, 1047, 1175, 523]; const idx = parseInt(card.dataset.card) || 0; card.addEventListener('mouseenter', () => playChime(pitches[idx % pitches.length])); /* 3D tilt */ card.addEventListener('mousemove', e => { const rect = card.getBoundingClientRect(); const x = e.clientX - rect.left - rect.width / 2; const y = e.clientY - rect.top - rect.height / 2; const tiltX = -(y / rect.height) * 10; const tiltY = (x / rect.width) * 10; card.style.transform = `perspective(800px) translateY(-6px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`; card.style.transition = 'box-shadow 0.3s, border-color 0.3s'; }); card.addEventListener('mouseleave', () => { card.style.transform = ''; card.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), border-color 0.4s, box-shadow 0.4s'; }); /* Click burst */ card.addEventListener('click', e => { playCardClickSound(); spawnBurst(e.clientX, e.clientY); }); }); /* ═════ TAB HOVER (no floating, just static) ═════ */ document.querySelectorAll('.float-tab').forEach(tab => { tab.addEventListener('mousemove', e => { const rect = tab.getBoundingClientRect(); const x = e.clientX - rect.left - rect.width / 2; const y = e.clientY - rect.top - rect.height / 2; const pullX = x * 0.12; const pullY = y * 0.12; const tiltX = -(y / rect.height) * 8; const tiltY = (x / rect.width) * 8; tab.style.transform = `perspective(400px) translate(${pullX}px,${pullY}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`; tab.style.transition = 'none'; }); tab.addEventListener('mouseleave', () => { tab.style.transform = ''; tab.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), border-color 0.35s, background 0.35s'; }); }); /* ═════ REFLECTION MODAL ═════ */ const refOverlay = document.getElementById('ref-modal-overlay'); const refModalTitle = document.getElementById('ref-modal-title'); const refModalClose = document.getElementById('ref-modal-close'); document.querySelectorAll('.ref-card').forEach(card => { card.addEventListener('click', () => { playCardClickSound(); refModalTitle.textContent = card.dataset.reflection || 'Reflection'; refOverlay.classList.add('open'); }); }); refModalClose.addEventListener('click', () => refOverlay.classList.remove('open')); refOverlay.addEventListener('click', e => { if (e.target === refOverlay) refOverlay.classList.remove('open'); }); 
-/* ===== PORTFOLIO SCREENSHOT LIGHTBOX ===== */
-(function(){
-  var lb = document.getElementById('pf-lightbox');
-  var lbImg = document.getElementById('pf-lightbox-img');
-  var lbCap = document.getElementById('pf-lightbox-caption');
-  var lbClose = document.getElementById('pf-lightbox-close');
+    <script> /* ═════ PAGE RELOAD FIX ═════ */ /* Ensure page always shows correctly after hard reload */ (function () { if (window.performance && window.performance.navigation && window.performance.navigation.type === 2) { window.location.reload(true); } })(); if (typeof window.pageXOffset === 'undefined') { window.pageXOffset = 0; } /* ═════ AUDIO ═════ */ let audioCtx = null, ambientPlaying = false, ambientNodes = {}, masterGain = null; function getAC() { if (!audioCtx) { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); masterGain = audioCtx.createGain(); masterGain.gain.value = 0.22; masterGain.connect(audioCtx.destination); } return audioCtx; } function startAmbient() { const c = getAC(); const g = c.createGain(); g.gain.value = 0; g.connect(masterGain);[55, 82.4, 110, 164.8, 220].forEach((f, i) => { const o = c.createOscillator(); const og = c.createGain(); o.type = i % 2 === 0 ? 'sine' : 'triangle'; o.frequency.value = f; og.gain.value = 0.06 / (i + 1); o.connect(og); og.connect(g); o.start(); }); const lfo = c.createOscillator(); const lg = c.createGain(); lfo.frequency.value = 0.08; lg.gain.value = 0.012; lfo.connect(lg); lg.connect(g.gain); lfo.start(); ambientNodes = { g }; g.gain.linearRampToValueAtTime(1, c.currentTime + 3); masterGain.gain.linearRampToValueAtTime(0.18, c.currentTime + 3); } function stopAmbient() { if (!audioCtx || !ambientNodes.g) return; masterGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 2.5); } function playChime(p) { p = p || 880; const c = getAC(); const now = c.currentTime; const vol = ambientPlaying ? 0.06 : 0.04; const o = c.createOscillator(); const g = c.createGain(); o.type = 'sine'; o.frequency.value = p; g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(vol, now + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, now + 0.9); o.connect(g); g.connect(masterGain); o.start(now); o.stop(now + 0.9); const o2 = c.createOscillator(); const g2 = c.createGain(); o2.type = 'sine'; o2.frequency.value = p * 2.756; g2.gain.setValueAtTime(0, now); g2.gain.linearRampToValueAtTime(vol * 0.4, now + 0.01); g2.gain.exponentialRampToValueAtTime(0.0001, now + 0.5); o2.connect(g2); g2.connect(masterGain); o2.start(now); o2.stop(now + 0.5); } function playCardClickSound() { const c = getAC(); const now = c.currentTime; const vol = 0.06; /* soft crystalline click */[880, 1108, 1320].forEach((f, i) => { const o = c.createOscillator(); const g = c.createGain(); const delay = i * 0.04; o.type = 'sine'; o.frequency.value = f; g.gain.setValueAtTime(0, now + delay); g.gain.linearRampToValueAtTime(vol / (i + 1), now + delay + 0.01); g.gain.exponentialRampToValueAtTime(0.0001, now + delay + 0.55); o.connect(g); g.connect(masterGain); o.start(now + delay); o.stop(now + delay + 0.6); }); } function playTabClickSound() { const c = getAC(); const now = c.currentTime; const vol = 0.055; const o = c.createOscillator(); const g = c.createGain(); o.type = 'triangle'; o.frequency.setValueAtTime(600, now); o.frequency.exponentialRampToValueAtTime(1200, now + 0.15); g.gain.setValueAtTime(0, now); g.gain.linearRampToValueAtTime(vol, now + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, now + 0.28); o.connect(g); g.connect(masterGain); o.start(now); o.stop(now + 0.3); } function playPortalSound(dir) { const c = getAC(); if (c.state === 'suspended') c.resume(); const now = c.currentTime; const boom = c.createOscillator(); const bg = c.createGain(); boom.type = 'sine'; boom.frequency.setValueAtTime(dir === 'enter' ? 55 : 90, now); boom.frequency.exponentialRampToValueAtTime(dir === 'enter' ? 130 : 38, now + 2); bg.gain.setValueAtTime(0, now); bg.gain.linearRampToValueAtTime(0.22, now + 0.25); bg.gain.linearRampToValueAtTime(0, now + 2.5); boom.connect(bg); bg.connect(masterGain); boom.start(now); boom.stop(now + 2.8);[440, 550, 660, 880].forEach((f, i) => { const o = c.createOscillator(); const g = c.createGain(); const d = i * 0.14; o.type = 'sine'; o.frequency.value = f; g.gain.setValueAtTime(0, now + d); g.gain.linearRampToValueAtTime(0.05, now + d + 0.2); g.gain.exponentialRampToValueAtTime(0.0001, now + d + 1.8); o.connect(g); g.connect(masterGain); o.start(now + d); o.stop(now + d + 2.2); }); if (!ambientPlaying) { masterGain.gain.setValueAtTime(0.24, now); masterGain.gain.linearRampToValueAtTime(0, now + 3.2); } } const aBtn = document.getElementById('audio-toggle'); const aLbl = document.getElementById('audio-label'); aBtn.addEventListener('click', () => { const c = getAC(); if (c.state === 'suspended') c.resume(); ambientPlaying = !ambientPlaying; if (ambientPlaying) { startAmbient(); aBtn.classList.add('playing'); aLbl.textContent = 'On'; } else { stopAmbient(); aBtn.classList.remove('playing'); aLbl.textContent = 'Ambience'; } }); /* ═════ CANVAS ═════ */ const canvas = document.getElementById('bg-canvas'); const ctx = canvas.getContext('2d'); let W, H, stars = [], crystals = []; let boost = false; const isMobile = window.innerWidth < 640; function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; } resize(); window.addEventListener('resize', () => { resize(); init(); }); function rand(a, b) { return Math.random() * (b - a) + a; } class Star { constructor() { this.reset(); } reset() { this.x = rand(0, W); this.y = rand(0, H); this.r = rand(0.3, 1.8); this.alpha = rand(0.1, 0.9); this.phase = rand(0, Math.PI * 2); this.tw = rand(0.003, 0.015); } draw(b) { this.phase += this.tw * (b ? 2.5 : 1); const a = this.alpha * (0.5 + 0.5 * Math.sin(this.phase)) * (b ? 1.4 : 1); ctx.beginPath(); ctx.arc(this.x, this.y, this.r * (b ? 1.3 : 1), 0, Math.PI * 2); ctx.fillStyle = `rgba(168,216,234,${Math.min(a, 1)})`; ctx.fill(); } } class Crystal { constructor() { this.reset(); } reset() { this.x = rand(0, W); this.y = rand(H * 0.3, H); this.vx = rand(-0.15, 0.15); this.vy = rand(-0.3, -0.05); this.size = rand(1, 3); this.alpha = rand(0.05, 0.2); this.life = 0; this.maxLife = rand(200, 600); this.angle = rand(0, Math.PI * 2); this.spin = rand(-0.005, 0.005); } update(b) { this.life++; const s = b ? 3.5 : 1; this.x += this.vx * s; this.y += this.vy * s; this.angle += this.spin * s; if (this.life > this.maxLife / (b ? 2 : 1) || this.y < -20) this.reset(); } draw(b) { const t = this.life / this.maxLife; const a = this.alpha * Math.sin(t * Math.PI) * (b ? 2.2 : 1); ctx.save(); ctx.translate(this.x, this.y); ctx.rotate(this.angle); ctx.strokeStyle = `rgba(168,216,234,${Math.min(a, 0.85)})`; ctx.lineWidth = b ? 1 : 0.5; for (let i = 0; i < 6; i++) { ctx.save(); ctx.rotate(i * Math.PI / 3); ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -this.size * (b ? 2 : 1)); ctx.stroke(); ctx.restore(); } ctx.restore(); } } class IceLine { constructor() { this.reset(); } reset() { this.x = rand(0, W); this.y = rand(0, H); this.len = rand(40, 180); this.angle = rand(0, Math.PI); this.alpha = rand(0.01, 0.05); this.w = rand(0.5, 1.2); this.segs = Math.floor(rand(3, 8)); this.pts = []; let cx = this.x, cy = this.y; for (let i = 0; i <= this.segs; i++) { cx += Math.cos(this.angle + rand(-0.4, 0.4)) * (this.len / this.segs); cy += Math.sin(this.angle + rand(-0.4, 0.4)) * (this.len / this.segs); this.pts.push([cx, cy]); } } } const iceC = document.createElement('canvas'); function init() { stars = Array.from({ length: isMobile ? 120 : 220 }, () => new Star()); crystals = Array.from({ length: isMobile ? 30 : 55 }, () => new Crystal()); iceC.width = W; iceC.height = H; const ic = iceC.getContext('2d'); Array.from({ length: isMobile ? 15 : 30 }, () => new IceLine()).forEach(l => { ic.beginPath(); ic.moveTo(l.x, l.y); for (const [px, py] of l.pts) ic.lineTo(px, py); ic.strokeStyle = `rgba(168,216,234,${l.alpha})`; ic.lineWidth = l.w; ic.stroke(); }); } function draw() { const b = boost; ctx.clearRect(0, 0, W, H); const g = ctx.createLinearGradient(0, 0, W, H); g.addColorStop(0, '#03101e'); g.addColorStop(0.4, '#061825'); g.addColorStop(1, '#020d18'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); ctx.drawImage(iceC, 0, 0); const gl = ctx.createRadialGradient(W / 2, 0, 0, W / 2, 0, H * 0.7); gl.addColorStop(0, b ? 'rgba(126,206,244,0.12)' : 'rgba(126,206,244,0.055)'); gl.addColorStop(1, 'transparent'); ctx.fillStyle = gl; ctx.fillRect(0, 0, W, H); stars.forEach(s => s.draw(b)); crystals.forEach(c => { c.update(b); c.draw(b); }); requestAnimationFrame(draw); } init(); draw(); /* ═════ RUNES ═════ */ const runes = ['ᚠ', 'ᚢ', 'ᚦ', 'ᚨ', 'ᚱ', 'ᚲ', 'ᚷ', 'ᚹ', 'ᚺ', 'ᚾ', 'ᛁ', 'ᛃ', 'ᛇ', 'ᛈ', 'ᛉ', 'ᛊ', 'ᛏ', 'ᛒ', 'ᛖ', 'ᛗ', 'ᛚ', 'ᛜ', 'ᛞ', 'ᛟ']; const aDiv = document.getElementById('ambient-runes'); const rc = isMobile ? 10 : 20; for (let i = 0; i < rc; i++) { const el = document.createElement('span'); el.className = 'rune-char'; el.textContent = runes[Math.floor(Math.random() * runes.length)]; el.style.left = Math.random() * 100 + 'vw'; el.style.top = (30 + Math.random() * 60) + 'vh'; el.style.animationDuration = (12 + Math.random() * 20) + 's'; el.style.animationDelay = (Math.random() * 15) + 's'; aDiv.appendChild(el); } /* ═════ CURSOR ═════ */ let portalActive = true; if (window.matchMedia('(hover: hover)').matches) { const cur = document.getElementById('cursor'); const outer = cur.querySelector('.ring-outer'); const inner = cur.querySelector('.ring-inner'); let mx = 0, my = 0, ox = 0, oy = 0; document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; inner.style.left = mx + 'px'; inner.style.top = my + 'px'; }); (function ac() { ox += (mx - ox) * 0.12; oy += (my - oy) * 0.12; outer.style.left = ox + 'px'; outer.style.top = oy + 'px'; requestAnimationFrame(ac); })(); document.querySelectorAll('a,button,.float-tab,.sys-card,.ref-card').forEach(el => { el.addEventListener('mouseenter', () => { outer.style.width = '52px'; outer.style.height = '52px'; outer.style.borderColor = 'rgba(126,206,244,0.8)'; }); el.addEventListener('mouseleave', () => { outer.style.width = '32px'; outer.style.height = '32px'; outer.style.borderColor = 'rgba(126,206,244,0.5)'; }); }); document.addEventListener('mousemove', e => { if (!portalActive) return; const dx = (e.clientX / window.innerWidth - 0.5); const dy = (e.clientY / window.innerHeight - 0.5); const t = document.querySelector('.hero-title'); const h = document.querySelector('.hero-halo'); if (t) t.style.transform = `translate(${dx * 8}px,${dy * 5}px)`; if (h) h.style.transform = `translate(calc(-50% + ${dx * 20}px),calc(-50% + ${dy * 14}px))`; }); const eb = document.getElementById('enter-btn'); eb.addEventListener('mousemove', e => { const r = eb.getBoundingClientRect(); const dx = e.clientX - (r.left + r.width / 2); const dy = e.clientY - (r.top + r.height / 2); eb.style.transform = `translate(${dx * 0.12}px,${dy * 0.12}px)`; eb.style.transition = ''; }); eb.addEventListener('mouseleave', () => { eb.style.transform = ''; eb.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)'; }); } /* ═════ HOVER CHIMES (tabs + buttons) ═════ */ const chimePitches = [523, 659, 784, 880, 1047]; let chIdx = 0; document.querySelectorAll('.float-tab,button').forEach(el => { el.addEventListener('mouseenter', () => { playChime(chimePitches[chIdx % chimePitches.length]); chIdx++; }); }); /* ═════ RIPPLE / PORTAL ═════ */ const portal = document.getElementById('portal'); const innerWorld = document.getElementById('inner-world'); const ripEl = document.getElementById('transition-ripple'); const ripRings = ripEl.querySelectorAll('.ripple-ring'); const backBtn = document.getElementById('portal-back-fixed'); function fireRipples() { ripEl.style.opacity = '1'; ripRings.forEach((r, i) => { setTimeout(() => { r.style.transition = 'transform 1.5s cubic-bezier(0.2,0.8,0.3,1), opacity 1.3s ease'; r.style.transform = 'translate(-50%,-50%) scale(5)'; r.style.opacity = '0'; }, i * 130); }); } function resetRipples() { setTimeout(() => { ripEl.style.opacity = '0'; ripRings.forEach(r => { r.style.transition = 'none'; r.style.transform = 'translate(-50%,-50%) scale(0)'; r.style.opacity = '0'; }); }, 1600); } function enterInner() { if (!portalActive) return; playPortalSound('enter'); boost = true; fireRipples(); setTimeout(() => portal.classList.add('departing'), 180); setTimeout(() => { document.body.classList.add('inner-open'); portal.style.display = 'none'; innerWorld.classList.add('revealed'); backBtn.classList.add('visible'); boost = false; portalActive = false; resetRipples(); setTimeout(() => { document.querySelectorAll('.float-tab').forEach((t, i) => { t.classList.add(i % 2 === 0 ? 'floating-odd' : 'floating-even'); }); }, 2600); }, 980); } function returnPortal() { if (portalActive) return; playPortalSound('exit'); boost = true; fireRipples(); innerWorld.style.transition = 'opacity 0.7s ease, transform 0.7s ease'; innerWorld.style.opacity = '0'; innerWorld.style.transform = 'translateY(32px)'; setTimeout(() => { innerWorld.classList.remove('revealed'); innerWorld.style.opacity = ''; innerWorld.style.transform = ''; innerWorld.style.transition = ''; portal.style.display = ''; portal.classList.remove('departing'); document.body.classList.remove('inner-open'); portalActive = true; boost = false; backBtn.classList.remove('visible'); document.querySelectorAll('.float-tab').forEach(t => { t.classList.remove('active', 'floating-odd', 'floating-even'); }); showBio(); resetRipples(); }, 700); } document.getElementById('enter-btn').addEventListener('click', enterInner); backBtn.addEventListener('click', returnPortal); /* ═════ TABS ═════ */ const bioSection = document.getElementById('bio-section'); const midHeading = document.getElementById('mid-heading'); const allPanels = document.querySelectorAll('.tab-content-panel'); function showBio() { allPanels.forEach(p => { p.classList.remove('active', 'visible'); }); bioSection.style.display = ''; midHeading.style.display = ''; } function showPanel(key) { bioSection.style.display = 'none'; midHeading.style.display = 'none'; allPanels.forEach(p => { p.classList.remove('active', 'visible'); }); const panel = document.getElementById('panel-' + key); if (!panel) return; panel.classList.add('active'); requestAnimationFrame(() => { requestAnimationFrame(() => panel.classList.add('visible')); }); } document.querySelectorAll('.float-tab').forEach(tab => { tab.addEventListener('click', () => { playTabClickSound(); const key = tab.dataset.tab; const isActive = tab.classList.contains('active'); document.querySelectorAll('.float-tab').forEach(t => t.classList.remove('active')); if (isActive) { showBio(); } else { tab.classList.add('active'); showPanel(key); } }); }); /* ═════ TIMELINE CHIMES ═════ */ document.querySelectorAll('.timeline-item').forEach(item => { item.addEventListener('mouseenter', () => { const pitch = parseInt(item.dataset.pitch) || 880; playChime(pitch); }); }); /* ═════ SYSTEMS CARDS — 3D HOVER + CLICK BURST ═════ */ function spawnBurst(x, y) { const container = document.createElement('div'); container.className = 'particle-burst'; container.style.left = x + 'px'; container.style.top = y + 'px'; document.body.appendChild(container); const colors = ['rgba(126,206,244,0.9)', 'rgba(201,168,76,0.85)', 'rgba(168,216,234,0.75)', 'rgba(255,255,255,0.6)']; const count = 18; for (let i = 0; i < count; i++) { const dot = document.createElement('div'); dot.className = 'burst-dot'; const angle = (i / count) * Math.PI * 2; const dist = 40 + Math.random() * 55; const tx = Math.cos(angle) * dist; const ty = Math.sin(angle) * dist; dot.style.setProperty('--tx', tx + 'px'); dot.style.setProperty('--ty', ty + 'px'); dot.style.background = colors[Math.floor(Math.random() * colors.length)]; dot.style.width = (2 + Math.random() * 3) + 'px'; dot.style.height = dot.style.width; dot.style.boxShadow = `0 0 6px ${colors[0]}`; dot.style.animationDuration = (0.6 + Math.random() * 0.4) + 's'; container.appendChild(dot); } setTimeout(() => container.remove(), 1200); } document.querySelectorAll('.sys-card').forEach(card => { /* Hover chime */ const pitches = [659, 784, 880, 1047, 1175, 523]; const idx = parseInt(card.dataset.card) || 0; card.addEventListener('mouseenter', () => playChime(pitches[idx % pitches.length])); /* 3D tilt */ card.addEventListener('mousemove', e => { const rect = card.getBoundingClientRect(); const x = e.clientX - rect.left - rect.width / 2; const y = e.clientY - rect.top - rect.height / 2; const tiltX = -(y / rect.height) * 10; const tiltY = (x / rect.width) * 10; card.style.transform = `perspective(800px) translateY(-6px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`; card.style.transition = 'box-shadow 0.3s, border-color 0.3s'; }); card.addEventListener('mouseleave', () => { card.style.transform = ''; card.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), border-color 0.4s, box-shadow 0.4s'; }); /* Click burst */ card.addEventListener('click', e => { playCardClickSound(); spawnBurst(e.clientX, e.clientY); }); }); /* ═════ TAB HOVER (no floating, just static) ═════ */ document.querySelectorAll('.float-tab').forEach(tab => { tab.addEventListener('mousemove', e => { const rect = tab.getBoundingClientRect(); const x = e.clientX - rect.left - rect.width / 2; const y = e.clientY - rect.top - rect.height / 2; const pullX = x * 0.12; const pullY = y * 0.12; const tiltX = -(y / rect.height) * 8; const tiltY = (x / rect.width) * 8; tab.style.transform = `perspective(400px) translate(${pullX}px,${pullY}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`; tab.style.transition = 'none'; }); tab.addEventListener('mouseleave', () => { tab.style.transform = ''; tab.style.transition = 'transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94), border-color 0.35s, background 0.35s'; }); }); /* ═════ REFLECTION MODAL ═════ */ const refOverlay = document.getElementById('ref-modal-overlay'); const refModalTitle = document.getElementById('ref-modal-title'); const refModalClose = document.getElementById('ref-modal-close'); document.querySelectorAll('.ref-card').forEach(card => { card.addEventListener('click', () => { playCardClickSound(); refModalTitle.textContent = card.dataset.reflection || 'Reflection'; refOverlay.classList.add('open'); }); }); refModalClose.addEventListener('click', () => refOverlay.classList.remove('open')); refOverlay.addEventListener('click', e => { if (e.target === refOverlay) refOverlay.classList.remove('open'); });
+        /* ===== PORTFOLIO SCREENSHOT LIGHTBOX ===== */
+        (function () {
+            var lb = document.getElementById('pf-lightbox');
+            var lbImg = document.getElementById('pf-lightbox-img');
+            var lbCap = document.getElementById('pf-lightbox-caption');
+            var lbClose = document.getElementById('pf-lightbox-close');
 
-  document.querySelectorAll('.pf-screenshot-item').forEach(function(item){
-    // hover chime
-    item.addEventListener('mouseenter', function(){ playChime(784); });
-    // click to open lightbox
-    item.addEventListener('click', function(){
-      var img = item.querySelector('img');
-      var cap = item.dataset.caption || '';
-      if(img){
-        lbImg.src = img.src;
-        lbImg.style.display = 'block';
-      } else {
-        lbImg.style.display = 'none';
-      }
-      lbCap.textContent = cap;
-      lb.classList.add('open');
-      playCardClickSound();
-    });
-  });
+            document.querySelectorAll('.pf-screenshot-item').forEach(function (item) {
+                // hover chime
+                item.addEventListener('mouseenter', function () { playChime(784); });
+                // click to open lightbox
+                item.addEventListener('click', function () {
+                    var img = item.querySelector('img');
+                    var cap = item.dataset.caption || '';
+                    if (img) {
+                        lbImg.src = img.src;
+                        lbImg.style.display = 'block';
+                    } else {
+                        lbImg.style.display = 'none';
+                    }
+                    lbCap.textContent = cap;
+                    lb.classList.add('open');
+                    playCardClickSound();
+                });
+            });
 
-  if(lbClose) lbClose.addEventListener('click', function(){ lb.classList.remove('open'); });
-  lb.addEventListener('click', function(e){ if(e.target === lb) lb.classList.remove('open'); });
-  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') lb.classList.remove('open'); });
-})();
+            if (lbClose) lbClose.addEventListener('click', function () { lb.classList.remove('open'); });
+            lb.addEventListener('click', function (e) { if (e.target === lb) lb.classList.remove('open'); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
+        })();
 
-</script>
+    </script>
 
-<!-- Portfolio Screenshot Lightbox -->
-<div class="pf-lightbox" id="pf-lightbox">
-  <div class="pf-lightbox-inner">
-    <button class="pf-lightbox-close" id="pf-lightbox-close">✕</button>
-    <img class="pf-lightbox-img" id="pf-lightbox-img" src="" alt="" />
-    <p class="pf-lightbox-caption" id="pf-lightbox-caption"></p>
-  </div>
-</div>
+    <!-- Portfolio Screenshot Lightbox -->
+    <div class="pf-lightbox" id="pf-lightbox">
+        <div class="pf-lightbox-inner">
+            <button class="pf-lightbox-close" id="pf-lightbox-close">✕</button>
+            <img class="pf-lightbox-img" id="pf-lightbox-img" src="" alt="" />
+            <p class="pf-lightbox-caption" id="pf-lightbox-caption"></p>
+        </div>
+    </div>
 
 </body>
 
